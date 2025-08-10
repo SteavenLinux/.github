@@ -5,8 +5,8 @@
 ##  Repos
 run
 ```sh
-sudo pacman-key --recv-keys 53A8F6EE177504E66BBBCA20C1F0637C80E7C321
-sudo pacman-key --lsign-key 53A8F6EE177504E66BBBCA20C1F0637C80E7C321
+sudo pacman-key --recv-keys 5D47A0A4882E9619CCF7D0A57FD4F55D1E0AA9CA
+sudo pacman-key --lsign-key 5D47A0A4882E9619CCF7D0A57FD4F55D1E0AA9CA
 ```
 
 in pacman.conf add 
