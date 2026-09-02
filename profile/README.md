@@ -12,11 +12,19 @@ sudo pacman-key --lsign-key 5D47A0A4882E9619CCF7D0A57FD4F55D1E0AA9CA
 in pacman.conf add 
 ```sh
 [SteavenRepo]
-Server = http://arabcraft.ddns.net:8080/$arch
-#Server = http://192.168.1.112/$arch
+SigLevel = Optional TrustAll
+Include = /etc/pacman.d/steavenrepo-mirrorlist
 ```
 before any repo
 
+create `/etc/pacman.d/steavenrepo-mirrorlist` and add in it
+```sh
+Server = http://arabcraft.ddns.net:8080/x86_64
+Server = http://arabcraft.omarhanykasban.online:8080/x86_64
+Server = http://steavenrepo.omarhanykasban.online
+Server = http://192.168.1.120:8080/x86_64
+Server = file:///mnt/Omar-PC-Server/home/omarhanykasban/SteavenRepo/x86_64
+```
 ## SteavenLinux Packages
 
 Core Packages: `sudo pamcan -Syu steavenlinuxname SteavenLinux-plymouth-theme SteavenBuntu-Wallpapers`
